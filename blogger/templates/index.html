@@ -1,0 +1,54 @@
+{% load static %}
+
+{% block body %}
+
+{%include 'navbar.html'%}
+
+   <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+
+
+
+<style>
+    p {color:blue; text left-align ;font-size:20px; }
+    h1 {color:blue; font-size:40px; text-align:;}
+    div {color:blue; text-align:center;}
+    button{background-color:blue; font-size:40px}
+    img {pb-5}
+</style>
+
+<div class="container-fliud " >
+    <img src="{% static '/image/4.jpg' %}" style="height:300px;width:20%">
+
+    <p>Hello, my name is</p>
+    <h1>Mohit Sharma</h1>
+    <div>And I'm a Web Developer</div>
+     <div>
+     </div>
+        <a class="btn btn-primary  pr-3  " href="{% url 'contact' %}" >Contact</a>
+    </div>
+</div>
+
+{% ifequal error "no" %}
+<script>
+    alert("contect successfully");
+    windows.location = ('{% url 'contact'%}');
+</script>
+{% endifequal %}
+
+{% ifequal error "yes" %}
+<script>
+    alert("Something Went Wrong, Try Again);
+</script>
+{% endifequal %}
+
+
+{% endblock %}

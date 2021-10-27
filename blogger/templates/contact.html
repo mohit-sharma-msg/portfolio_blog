@@ -1,0 +1,58 @@
+{% load static %}
+
+{% block body %}
+
+{%include 'navbar.html'%}
+
+<meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap4.min.js"></script>
+
+ </div>
+
+         <div class="col-sm-3 mt-5 " style = "color:blue;padding-left:10%">
+             <span style="font-weight:bold ; font-size : 20px">
+                 <span><i class="fa fa-twitter pl-1"></i></span>
+                 <span><i class="fa fa-linkedin pl-1"></i></span>
+                 <span><i class="fa fa-instagram pl-1"></i></span>
+                 <span><i class="fa fa-facebook pl-1"></i></span>
+                 <span><i class="fa fa-telegram pl-1"></i></span>
+             </span>
+         </div>
+
+<div style="background-color: white ;width:100%;height:220px">
+    <div class="container">
+     <div class="row">
+        <div class="col-md-4 mt-3">
+            <h3 class="text-blue">Contact Information</h3>
+            <p style="color:blue;font-size:20px"> Upper Bhaktiyana,Srinagar Garhwal</p>
+            <p style="color:blue;font-size:14px"> ms3663252@gmail.com</p>
+            <p style="color:blue;font-size:14px">    +918602278216</i></p>
+            <p style="color:blue;font-size:14px"> www.portfolio.com</i></p>
+        </div>
+            <div class="col-md-4 mt-3">
+                <h3 class="text-white">About</h3>
+                <p style="color:white; font-size:14px">
+            </div>
+            <div class="col-md-4 mt-3">
+                <h3 class="text-white">Notification</h3>
+                <p style="color:white; font-size:14px">If you want the extra information then send your email id</p>
+                <form method="post" class="form-inline">
+                {% csrf_token %}
+                <input type="email" name="emailid" placeholder="Email ID" required class="form-control mr">
+                <input type="submit" value="send" class="btn btn-primary">
+            </form>
+            </div>
+     </div>
+    </div>
+</div>
+
+
+{% endblock %}
